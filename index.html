@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KryzoxXD | Minecraft Developer</title>
+
+  <!-- Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./src/favicon/favicon.ico" type="image/x-icon">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Custom cursor (defined once, applied site-wide) */
+    body,
+    a,
+    [role="button"] {
+      cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABU5JREFUWEe9l2tsFFUUx//nzsy23RaKaZnStN3dCQWMaCAQCUFNMBalRqNgiR8sIjF+JNQYIdHEKGh8RB4JGu2GIBoiREQRISomysM14iOIPLQFO9N0+8BdGuhj233MXHN3ZrfLuttKNTvJZHf23rvnd/7n3HPuEPJcHo9nFWPsJSKaCaAdwHO6rn+eb/5kf6dcC71e7wpG7JNqWFjCEzhOMkIgyzTNxq6urqOTNZZrXU4ATdNOVXBr0XEMwc0IAxLhrrgbA6BvDMO4pxAAfQ1IVPmlUUCi5L06WoTvTNZhGIYIyf925VPg8jKWUFtdUYDZAM0RFwKJQgJIptpaEgMk2ACDCgKxQgIoptpaFk+HoPmqjMAoFTAERabaWp4AZJZUoTkkITBSSIBiS22tNMcU6GUIRFBABdxcba2yANlJwiAQGCwkQBlXW2u4rYBMaNaBwAAvnAINU7nq99reJwEuWghc5RxAD+d87/Dw8KZwODz4XwtCZh0oqqmpmd7d3d2jaVpvwzSo/pksHYKt3Rb6LaBtiOOHK5ZgOs85X22aphkMBtsARCcDkwTw+XwtRLQJwBTOeSeA6csqyO2fIzm7QKhg1wMoDAcuW3j61ChkUaTs6xqALbquvwLAuhEQ8nq9jxGjPbe5gYZphH1hoC8GNFQS/HPldAiSyegkpIDYfDaG6ikMikw49GcMv/QmQITdnPMdkUikPRQKDf0bEPL5fD+rLiw8OV+CixEuWYS7T8XROEOCf54yZjRlPAWS+exiWPf1EI78EYNIEiKMWpa10zTNDcFgcGQ8EAEQebiKlWyrlxyJCY0/xVFXSvAvdNkhyDbuJGYqQcV4OAHs/z2KqaUMx9qj+PK8CBFE97wXgJkPIgmwsloq2XKzkBtJY5svmega4fAvLs4dgsxwpGCyFNl+cgjbDl8DgT/Z2dm5Ky+Apmlt88pp9qeLXXbnkwlnI8COthj8d5ZkeC+UcBIxW5VsRSSCWcywYGMQgyP8qK7r942nwG4C1px70A13OskIfQlghtuRP9O7tMeiR2QkZmqOo6LQf60/hGNnIn2GYVTnBfB4PE0gtn/7kmKs8DhJl9PgWFEai73dqK4DcQ4wQskN+/rx8beDcV3XXXkBamtrS2RZ7l6gSjcdaCxLhyEzwXJ6mgsyZdz5bHk/hM+ODUYMwyjNCyAGvF7vGyanZw+vmop5laL4CG9zyJ+W2ZE+8zlt3FHExbDyxSB+bY+267o+ZyKAaiK6dHut4v6oqRxgGcmWGef0d3u3JCFTIcj0XiaMMMLcRy+KuvCBYRhrxgUQg5qmvRw3+fNvPVKOh2YX2QayZc6GyZI8vUsYYd/3g9i4tU9sw6bOzs4DEwKIXFAU5Te3jPqvWlTUlGUVoH8YEwrg+pwRcxghrhCWPtWB3r8SXbqui1N0fEIAMaG2tnaRoign6lW56OB61d6WqTtZI0Ro8sieNA5AIby+9wre2RMWJXmtYRi7xy3F2YM+n+8JAO/N97iwp6UKpS5m//F4Cecc3cWcQz8OYd0LQTAJXxiGcf9EDSnne4HP51sPYJtnukw7n6nGrEqnKybD4CRoZkgEoIvh3YP9eO3tyyCGCwDuMAzj6qQAxCLxcipJ0i5wXta8vByPL5+Geo/LbitJj21VrCKGE6eHsXVXCGcujECS6GQ0Gl3Z09MTnsi4GM+pQGphXV3dTFmWtwN4IBqzUKMquHVWMSqEIkQIheM4fS6C/gETisyucc5fNQzjzfG6XzbUuACpyZqmzbEsq4kxtpRzfgsRVThjIQBnOOdHGGMfdnR0iJPRDV1/A/S02zBdMZSwAAAAAElFTkSuQmCC") 6 3, pointer;
+    }
+
+    /* Subtle grid background pattern */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+    }
+  </style>
+</head>
+
+<body class="relative min-h-screen bg-neutral-950 text-neutral-300 selection:bg-amber-500/30 selection:text-amber-200">
+
+  <!-- ===== Background ===== -->
+  <div class="pointer-events-none fixed inset-0 z-0 flex justify-center">
+    <div class="absolute inset-0 bg-grid-pattern"></div>
+    <div class="absolute top-0 h-[50vh] w-full max-w-4xl rounded-full bg-amber-500/5 blur-[120px]"></div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="sticky top-0 z-50 border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center gap-2 text-white transition-opacity hover:opacity-80">
+        <span class="text-lg font-medium tracking-tighter">KryzoxXD</span>
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#services" class="text-sm text-neutral-400 transition-colors hover:text-white">Expertise</a>
+        <a href="#workflow" class="text-sm text-neutral-400 transition-colors hover:text-white">Workflow</a>
+        <a href="#servers" class="text-sm text-neutral-400 transition-colors hover:text-white">Servers</a>
+        <a href="#contact" class="rounded-full bg-white px-4 py-1.5 text-sm font-medium text-neutral-950 transition-colors hover:bg-neutral-200">Get in touch</a>
+      </div>
+
+      <button class="flex items-center text-neutral-400 hover:text-white md:hidden">
+        <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
+      </button>
+    </div>
+  </nav>
+
+  <main class="relative z-10 mx-auto max-w-5xl px-6 pb-24 pt-16 sm:pt-24 md:pb-32 md:pt-32">
+
+    <!-- ===== Hero ===== -->
+    <section class="flex flex-col items-start gap-6 pb-20 md:pb-32">
+      <div class="inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/50 px-3 py-1.5 text-xs font-medium text-neutral-400 backdrop-blur-sm">
+        Available for Minecraft Server Dev
+        <span class="flex h-2 w-2 rounded-full bg-amber-500"></span>
+      </div>
+
+      <div class="max-w-3xl">
+        <h1 class="mb-6 text-4xl font-medium tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          Hi <span class="text-neutral-500">I am</span> KryzoxXD Professional <span class="text-neutral-500">Developer</span>
+        </h1>
+
+        <p class="mb-10 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+          I build seamless, high-performance Minecraft server experiences specializing in advanced Skript development, intricate DeluxeMenus GUIs, and expert plugin reconfiguration.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-medium text-neutral-950 transition-all hover:bg-amber-400">
+            Discuss a project
+            <iconify-icon icon="solar:arrow-right-up-linear" width="18" height="18"></iconify-icon>
+          </a>
+          <a href="#services" class="inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/50 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-neutral-800">
+            View expertise
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FluxSMP Live Server Status ===== -->
+    <section id="fluxsmp-status" class="py-16 md:py-24">
+
+      <div class="mb-10 text-center">
+        <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-500/20 bg-amber-500/10 px-4 py-2 text-xs font-medium text-amber-400">
+          <span class="h-2 w-2 animate-pulse rounded-full bg-amber-500"></span>
+          LIVE SERVER MONITOR
+        </div>
+
+        <h2 class="text-3xl font-medium tracking-tight text-white sm:text-4xl">
+          Server Status
+        </h2>
+
+        <p class="mt-3 text-sm text-neutral-400">
+          Real-time FluxSMP server information.
+        </p>
+      </div>
+
+      <div class="mx-auto max-w-3xl overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900/40 shadow-2xl">
+
+        <!-- Server Header -->
+        <div class="flex flex-col gap-5 border-b border-neutral-800 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+
+          <div class="flex items-center gap-4">
+            <div class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-950 text-3xl">
+              <img src="./src/images/FluxSMP%20Logo.png" alt="FluxSMP logo" class="h-full w-full object-cover">
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold text-white">FluxSMP</h3>
+              <p class="mt-1 text-xs text-neutral-500">Minecraft Network Experience.</p>
+            </div>
+          </div>
+
+          <div id="flux-status-badge"
+            class="inline-flex w-fit items-center gap-2 rounded-full border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-xs font-semibold text-neutral-400">
+            <span id="flux-status-dot" class="h-2 w-2 rounded-full bg-neutral-500"></span>
+            <span id="flux-status-text">Checking server...</span>
+          </div>
+
+        </div>
+
+        <!-- Main Statistics -->
+        <div class="grid grid-cols-2 gap-3 p-6 sm:grid-cols-3 sm:p-8">
+
+          <div class="rounded-2xl border border-neutral-800 bg-neutral-950/70 p-5">
+            <div class="mb-3 flex items-center gap-2 text-neutral-500">
+              <iconify-icon icon="solar:users-group-rounded-linear" width="20"></iconify-icon>
+              <span class="text-xs">Players Online</span>
+            </div>
+            <p id="flux-players" class="text-2xl font-semibold text-white">-- / --</p>
+          </div>
+
+          <div class="rounded-2xl border border-neutral-800 bg-neutral-950/70 p-5">
+            <div class="mb-3 flex items-center gap-2 text-neutral-500">
+              <iconify-icon icon="solar:server-linear" width="20"></iconify-icon>
+              <span class="text-xs">Server Version</span>
+            </div>
+            <p id="flux-version" class="truncate text-lg font-semibold text-white">1.21.11</p>
+          </div>
+
+          <div class="col-span-2 rounded-2xl border border-neutral-800 bg-neutral-950/70 p-5 sm:col-span-1">
+            <div class="mb-3 flex items-center gap-2 text-neutral-500">
+              <iconify-icon icon="solar:refresh-circle-linear" width="20"></iconify-icon>
+              <span class="text-xs">Last Updated</span>
+            </div>
+            <p id="flux-updated" class="text-lg font-semibold text-white">Waiting...</p>
+          </div>
+
+        </div>
+
+        <!-- Server Address -->
+        <div class="mx-6 mb-6 rounded-2xl border border-neutral-800 bg-neutral-950/70 p-5 sm:mx-8">
+
+          <div class="mb-4 flex items-center justify-between">
+            <span class="text-xs font-medium uppercase tracking-wider text-neutral-500">
+              Server Address
+            </span>
+            <span class="text-xs text-green-400">Bedrock Edition</span>
+          </div>
+
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-lg font-semibold text-white">play.fluxsmp.fun</p>
+              <p class="mt-1 text-sm text-neutral-500">Port: 19132</p>
+            </div>
+
+            <button onclick="copyFluxIP()"
+              class="inline-flex items-center justify-center gap-2 rounded-xl border border-neutral-700 bg-neutral-800 px-5 py-3 text-sm font-medium text-white transition hover:border-amber-500 hover:bg-neutral-700">
+              <iconify-icon icon="solar:copy-linear" width="18"></iconify-icon>
+              <span id="flux-copy-text">Copy IP</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Server MOTD -->
+        <div class="mx-6 mb-6 rounded-2xl border border-neutral-800 bg-neutral-950/70 p-5 sm:mx-8">
+          <div class="mb-3 flex items-center gap-2 text-neutral-500">
+            <iconify-icon icon="solar:chat-round-dots-linear" width="18"></iconify-icon>
+            <span class="text-xs font-medium uppercase tracking-wider">Server Description</span>
+          </div>
+
+          <p id="flux-motd" class="text-sm leading-relaxed text-neutral-300">
+            Fetching server information...
+          </p>
+        </div>
+
+        <!-- Player List -->
+        <div class="mx-6 mb-6 rounded-2xl border border-neutral-800 bg-neutral-950/70 p-5 sm:mx-8">
+          <div class="mb-4 flex items-center justify-between">
+            <h4 class="text-sm font-semibold text-white">Online Players</h4>
+            <span id="flux-player-count" class="text-xs text-neutral-500">0 players</span>
+          </div>
+
+          <div id="flux-player-list" class="flex flex-wrap gap-2">
+            <span class="text-xs text-neutral-500">Player information unavailable.</span>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex flex-col gap-4 border-t border-neutral-800 px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+
+          <div class="flex items-center gap-2 text-xs text-neutral-500">
+            <span class="h-2 w-2 rounded-full bg-green-500"></span>
+            Automatically refreshes every 30 seconds
+          </div>
+
+          <button onclick="fetchFluxStatus()"
+            id="flux-refresh-button"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-5 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-amber-400 disabled:cursor-wait disabled:opacity-60">
+            <iconify-icon icon="solar:refresh-linear" width="18"></iconify-icon>
+            Refresh Status
+          </button>
+
+        </div>
+
+      </div>
+
+      <p class="mt-5 text-center text-xs text-neutral-600">
+        Status data provided by an external Minecraft server status API.
+      </p>
+
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section id="services" class="py-16">
+      <div class="mb-10 flex flex-col gap-2">
+        <h2 class="text-2xl font-medium tracking-tight text-white sm:text-3xl">Core Expertise</h2>
+        <p class="text-sm text-neutral-400">Specialized technical skills for modern Minecraft networks.</p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Skript -->
+        <div class="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/30 p-6 transition-colors hover:bg-neutral-900/60">
+          <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 text-amber-500 shadow-inner">
+            <iconify-icon icon="solar:code-file-linear" width="24" height="24"></iconify-icon>
+          </div>
+          <h3 class="mb-3 text-xl font-medium tracking-tight text-white">Skript Development</h3>
+          <p class="text-sm leading-relaxed text-neutral-400">
+            From simple utility commands to complex custom core mechanics and mini-games. I write clean, optimized, and lag-free Skript code tailored to your specific vision.
+          </p>
+        </div>
+
+        <!-- DeluxeMenus -->
+        <div class="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/30 p-6 transition-colors hover:bg-neutral-900/60">
+          <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 text-amber-500 shadow-inner">
+            <iconify-icon icon="solar:window-frame-linear" width="24" height="24"></iconify-icon>
+          </div>
+          <h3 class="mb-3 text-xl font-medium tracking-tight text-white">DeluxeMenus GUIs</h3>
+          <p class="text-sm leading-relaxed text-neutral-400">
+            Designing intuitive and visually appealing user interfaces. I create dynamic, permissions-based, and multi-layered menus that keep your players engaged and informed.
+          </p>
+        </div>
+
+        <!-- Plugin Configuration -->
+        <div class="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/30 p-6 transition-colors hover:bg-neutral-900/60">
+          <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 text-amber-500 shadow-inner">
+            <iconify-icon icon="solar:settings-linear" width="24" height="24"></iconify-icon>
+          </div>
+          <h3 class="mb-3 text-xl font-medium tracking-tight text-white">Plugin Configuration</h3>
+          <p class="text-sm leading-relaxed text-neutral-400">
+            Overhauling existing setups or configuring new plugins from scratch. I ensure synergy between plugins, fix conflicts, and optimize YAML/JSON files for peak server performance.
+          </p>
+        </div>
+
+        <!-- Discord.js -->
+        <div class="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/30 p-6 transition-colors hover:bg-neutral-900/60">
+          <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 text-amber-500 shadow-inner">
+            <iconify-icon icon="solar:chat-square-code-linear" width="24" height="24"></iconify-icon>
+          </div>
+          <h3 class="mb-3 text-xl font-medium tracking-tight text-white">Discord.js Development</h3>
+          <p class="text-sm leading-relaxed text-neutral-400">
+            Building powerful Discord bots with Discord.js, from moderation and ticket systems to slash commands and server integrations. I deliver reliable, well-structured bots that keep your community running smoothly.
+          </p>
+        </div>
+
+        <!-- Custom Development -->
+        <div class="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/30 p-6 transition-colors hover:bg-neutral-900/60">
+          <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 text-amber-500 shadow-inner">
+            <iconify-icon icon="solar:programming-linear" width="24" height="24"></iconify-icon>
+          </div>
+          <h3 class="mb-3 text-xl font-medium tracking-tight text-white">Custom Development</h3>
+          <p class="text-sm leading-relaxed text-neutral-400">
+            Have a unique idea that doesn't fit a standard plugin or script? I build tailored solutions from the ground up, designed around your exact requirements and made to be clean, maintainable, and easy to expand.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Workflow / Technical Approach ===== -->
+    <section id="workflow" class="py-16 md:py-24">
+      <div class="rounded-3xl border border-neutral-800 bg-neutral-900/20 p-8 md:p-12">
+        <div class="grid gap-12 md:grid-cols-2 md:gap-8">
+
+          <!-- Text -->
+          <div class="flex flex-col justify-center">
+            <h2 class="mb-4 text-2xl font-medium tracking-tight text-white sm:text-3xl">Built for performance and scale.</h2>
+            <p class="mb-6 text-sm leading-relaxed text-neutral-400 md:text-base">
+              I don't just write scripts or edit config files; I architect solutions that scale. Whether you run a small SMP or a large network, my configurations are designed to be easily readable, highly maintainable, and impact server TPS as little as possible.
+            </p>
+            <ul class="flex flex-col gap-3 text-sm text-neutral-300">
+              <li class="flex items-center gap-3">
+                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500" width="18" height="18"></iconify-icon>
+                Clean, documented code structure.
+              </li>
+              <li class="flex items-center gap-3">
+                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500" width="18" height="18"></iconify-icon>
+                Focus on low-latency execution.
+              </li>
+              <li class="flex items-center gap-3">
+                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500" width="18" height="18"></iconify-icon>
+                Extensive testing before delivery.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Decorative code block -->
+          <div class="relative flex items-center justify-center overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950 p-6 font-mono text-xs sm:text-sm">
+            <div class="absolute left-4 top-4 flex gap-1.5">
+              <div class="h-2.5 w-2.5 rounded-full bg-neutral-800"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-neutral-800"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-neutral-800"></div>
+            </div>
+
+            <div class="w-full overflow-x-auto whitespace-nowrap pt-6 text-neutral-400">
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">1</span><span><span class="text-purple-400">function</span> <span class="text-blue-400">calculateDamage</span><span class="text-neutral-300">(p: player, base: number) :: number:</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">2</span><span class="ml-4"><span class="text-purple-400">set</span> <span class="text-amber-400">{_mult}</span> <span class="text-neutral-300">to</span> <span class="text-green-400">1.0</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">3</span><span class="ml-4"><span class="text-purple-400">if</span> <span class="text-amber-400">{data::%uuid of {_p}%::crit}</span> <span class="text-neutral-300">is</span> <span class="text-purple-400">true</span><span class="text-neutral-300">:</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">4</span><span class="ml-8"><span class="text-purple-400">add</span> <span class="text-green-400">0.5</span> <span class="text-neutral-300">to</span> <span class="text-amber-400">{_mult}</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">5</span><span class="ml-4"><span class="text-purple-400">set</span> <span class="text-amber-400">{_nbt}</span> <span class="text-neutral-300">to nbt compound of</span> <span class="text-amber-400">{_p}</span><span class="text-neutral-300">'s tool</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">6</span><span class="ml-4"><span class="text-purple-400">if</span> <span class="text-neutral-300">tag</span> <span class="text-green-400">"custom_dmg"</span> <span class="text-neutral-300">of</span> <span class="text-amber-400">{_nbt}</span> <span class="text-neutral-300">is set:</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">7</span><span class="ml-8"><span class="text-purple-400">set</span> <span class="text-amber-400">{_base}</span> <span class="text-neutral-300">to tag</span> <span class="text-green-400">"custom_dmg"</span> <span class="text-neutral-300">of</span> <span class="text-amber-400">{_nbt}</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">8</span><span class="ml-4"><span class="text-purple-400">set</span> <span class="text-amber-400">{_final}</span> <span class="text-neutral-300">to</span> <span class="text-amber-400">{_base}</span> <span class="text-neutral-300">*</span> <span class="text-amber-400">{_mult}</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">9</span><span class="ml-4"><span class="text-purple-400">return</span> <span class="text-amber-400">{_final}</span></span></div>
+              <div class="flex"><span class="w-8 shrink-0 text-neutral-700">10</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Servers Developed For ===== -->
+    <section id="servers" class="py-16">
+      <div class="mb-10 flex flex-col gap-2">
+        <h2 class="text-2xl font-medium tracking-tight text-white sm:text-3xl">Servers Developed For</h2>
+        <p class="text-sm text-neutral-400">A selection of Minecraft networks I've contributed to.</p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Server 1: Ash Mc -->
+        <div class="group relative cursor-pointer overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/30 p-6 transition-colors hover:bg-neutral-900/60"
+             onclick="window.location.href='#'" role="button">
+          <div class="mb-4 flex items-center justify-between">
+            <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 text-amber-500 shadow-inner">
+              <iconify-icon icon="solar:square-top-down-outline" width="20" height="20"></iconify-icon>
+            </div>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-green-500/20 bg-green-500/10 px-2 py-1 text-[10px] font-medium uppercase tracking-widest text-green-400">Active</span>
+          </div>
+          <h3 class="mb-2 text-lg font-medium tracking-tight text-white">Ash Mc</h3>
+          <p class="mb-6 text-sm leading-relaxed text-neutral-400">Developed custom skripts for the server. Aswell as reconfiguring plugins such as essentials! 3/21/2026 - Current. Memoreable Journey.</p>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <span class="rounded-md border border-neutral-800 bg-neutral-800/50 px-2 py-1 text-xs text-neutral-300">Skript</span>
+            <span class="rounded-md border border-neutral-800 bg-neutral-800/50 px-2 py-1 text-xs text-neutral-300">Reconfiguration</span>
+          </div>
+        </div>
+
+        <!-- Server 2: Void Mc -->
+        <div class="group relative cursor-pointer overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/30 p-6 transition-colors hover:bg-neutral-900/60"
+             onclick="window.location.href='#'" role="button">
+          <div class="mb-4 flex items-center justify-between">
+            <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 text-amber-500 shadow-inner">
+              <iconify-icon icon="solar:forbidden-circle-outline" width="20" height="20"></iconify-icon>
+            </div>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-neutral-500/20 bg-neutral-500/10 px-2 py-1 text-[10px] font-medium uppercase tracking-widest text-neutral-400">Archived</span>
+          </div>
+          <h3 class="mb-2 text-lg font-medium tracking-tight text-white">Void Mc</h3>
+          <p class="mb-6 text-sm leading-relaxed text-neutral-400">Created many skripts to make the server better for all! Here I made deluxemenus and skripts. 2/8/2026 - Server End.</p>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <span class="rounded-md border border-neutral-800 bg-neutral-800/50 px-2 py-1 text-xs text-neutral-300">DeluxeMenu</span>
+            <span class="rounded-md border border-neutral-800 bg-neutral-800/50 px-2 py-1 text-xs text-neutral-300">Skript</span>
+          </div>
+        </div>
+
+        <!-- Server 3: FluxSMP -->
+        <div class="group relative cursor-pointer overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/30 p-6 transition-colors hover:bg-neutral-900/60"
+             onclick="window.location.href='#'" role="button">
+          <div class="mb-4 flex items-center justify-between">
+            <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 text-amber-500 shadow-inner">
+              <iconify-icon icon="solar:square-top-down-outline" width="20" height="20"></iconify-icon>
+            </div>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-green-500/20 bg-green-500/10 px-2 py-1 text-[10px] font-medium uppercase tracking-widest text-green-400">Active</span>
+          </div>
+          <h3 class="mb-2 text-lg font-medium tracking-tight text-white">FluxSMP</h3>
+          <p class="mb-6 text-sm leading-relaxed text-neutral-400">Developed skripts for the server to enhance the playerbase. Current. I have started my journey from beginning and became the Owner.</p>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <span class="rounded-md border border-neutral-800 bg-neutral-800/50 px-2 py-1 text-xs text-neutral-300">Skript</span>
+            <span class="rounded-md border border-neutral-800 bg-neutral-800/50 px-2 py-1 text-xs text-neutral-300">Logs</span>
+            <span class="rounded-md border border-neutral-800 bg-neutral-800/50 px-2 py-1 text-xs text-neutral-300">Server Management</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="py-16 text-center md:py-24">
+      <h2 class="mb-4 text-3xl font-medium tracking-tight text-white sm:text-4xl md:text-5xl">Ready to upgrade your server?</h2>
+      <p class="mx-auto mb-10 max-w-xl text-sm text-neutral-400 sm:text-base">
+        Reach out on Discord to discuss your requirements, get a quote, or check out my extended profile to learn more.
+      </p>
+
+      <!-- Project contact form -->
+      <form id="contact-form" class="mx-auto mb-12 max-w-2xl rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 text-left sm:p-8">
+        <h3 class="mb-2 text-xl font-medium text-white">Send a project request</h3>
+        <p class="mb-6 text-sm text-neutral-400">Fill in the details below to tell me about your project.</p>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="contact-name" class="mb-2 block text-sm font-medium text-neutral-300">Your name</label>
+            <input id="contact-name" name="name" type="text" required autocomplete="name" placeholder="Enter your name"
+              class="w-full rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-3 text-sm text-white outline-none focus:border-amber-500">
+          </div>
+
+          <div>
+            <label for="contact-email" class="mb-2 block text-sm font-medium text-neutral-300">Email address</label>
+            <input id="contact-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
+              class="w-full rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-3 text-sm text-white outline-none focus:border-amber-500">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="contact-service" class="mb-2 block text-sm font-medium text-neutral-300">Service required</label>
+            <select id="contact-service" name="service" required
+              class="w-full rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-3 text-sm text-white outline-none focus:border-amber-500">
+              <option value="" disabled selected>Select a service</option>
+              <option value="Skript Development">Skript Development</option>
+              <option value="DeluxeMenus GUIs">DeluxeMenus GUIs</option>
+              <option value="Plugin Configuration">Plugin Configuration</option>
+              <option value="Other / Custom Development">Other / Custom Development</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="contact-message" class="mb-2 block text-sm font-medium text-neutral-300">Project message</label>
+            <textarea id="contact-message" name="message" rows="5" required placeholder="Describe what you need..."
+              class="w-full resize-y rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-3 text-sm text-white outline-none focus:border-amber-500"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="mt-6 inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-medium text-neutral-950 transition-colors hover:bg-amber-400">
+          Send project request
+          <iconify-icon icon="solar:arrow-right-up-linear" width="18" height="18"></iconify-icon>
+        </button>
+        <p class="mt-4 text-xs text-neutral-500">Submitting opens your email app with the details ready to send.</p>
+      </form>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+
+        <!-- Discord -->
+        <div class="inline-flex cursor-pointer items-center gap-4 rounded-2xl border border-neutral-800 bg-neutral-900/50 py-2 pl-2 pr-6 backdrop-blur-sm transition-colors hover:border-neutral-700"
+             onclick="window.location.href='https://discord.com/channels/@me'" role="button">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950">
+            <iconify-icon icon="solar:chat-round-dots-linear" class="text-amber-500" width="24" height="24"></iconify-icon>
+          </div>
+          <div class="text-left">
+            <p class="text-xs text-neutral-500">Discord</p>
+            <p class="text-sm font-medium tracking-tight text-white">KryzoxXD.gg</p>
+          </div>
+        </div>
+
+        <!-- More info -->
+        <a href="https://guns.lol/kryzoxxd" target="_blank" rel="noopener noreferrer"
+           class="group inline-flex items-center gap-4 rounded-2xl border border-neutral-800 bg-neutral-900/50 py-2 pl-2 pr-6 backdrop-blur-sm transition-all hover:border-neutral-700 hover:bg-neutral-800/50">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950 transition-colors group-hover:border-neutral-700">
+            <iconify-icon icon="solar:link-square-linear" class="text-amber-500" width="24" height="24"></iconify-icon>
+          </div>
+          <div class="text-left">
+            <p class="text-xs text-neutral-500">More Info</p>
+            <p class="text-sm font-medium tracking-tight text-white">rhythmstha826@gmail.com</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+<!-- ===== FluxSMP Status Script ===== -->
+<script>
+const FLUX_HOST = "play.fluxsmp.fun";
+const FLUX_REFRESH_MS = 30000;
+const FLUX_TIMEOUT_MS = 10000;
+
+const FLUX_API =
+  `https://api.mcstatus.io/v2/status/java/${encodeURIComponent(FLUX_HOST)}`;
+
+  const FLUX_BADGE = {
+    checking: ["border-neutral-700 bg-neutral-800/50 text-neutral-400", "bg-neutral-500"],
+    online: ["border-green-500/20 bg-green-500/10 text-green-400", "animate-pulse bg-green-500"],
+    offline: ["border-red-500/20 bg-red-500/10 text-red-400", "bg-red-500"],
+    error: ["border-yellow-500/20 bg-yellow-500/10 text-yellow-400", "bg-yellow-500"]
+  };
+
+  let fluxBusy = false;
+
+  function fluxEl(id) {
+    return document.getElementById(id);
+  }
+
+  function setFluxBadge(state, label) {
+    const badge = fluxEl("flux-status-badge");
+    const dot = fluxEl("flux-status-dot");
+    const text = fluxEl("flux-status-text");
+
+    if (!badge || !dot || !text) return;
+
+    const [badgeClasses, dotClasses] = FLUX_BADGE[state];
+
+    badge.className =
+      "inline-flex w-fit items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold " +
+      badgeClasses;
+
+    dot.className = "h-2 w-2 rounded-full " + dotClasses;
+    text.textContent = label;
+  }
+
+  async function fetchFluxStatus() {
+    if (fluxBusy) return;
+    fluxBusy = true;
+
+    const button = fluxEl("flux-refresh-button");
+    if (button) button.disabled = true;
+
+    setFluxBadge("checking", "Checking...");
+
+    const controller = new AbortController();
+    const timeout = setTimeout(
+      () => controller.abort(),
+      FLUX_TIMEOUT_MS
+    );
+
+    try {
+      const response = await fetch(FLUX_API, {
+        method: "GET",
+        signal: controller.signal,
+        cache: "no-store"
+      });
+
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.online) {
+        setFluxBadge("online", "Online");
+
+        if (fluxEl("flux-players")) {
+          fluxEl("flux-players").textContent =
+            `${data.players?.online ?? "--"} / ${data.players?.max ?? "--"}`;
+        }
+
+        if (fluxEl("flux-version")) {
+          fluxEl("flux-version").textContent =
+            data.version?.name || "Unknown";
+        }
+
+        if (fluxEl("flux-motd")) {
+          fluxEl("flux-motd").textContent =
+            data.motd?.clean || "FluxSMP Minecraft Server";
+        }
+
+        if (fluxEl("flux-player-count")) {
+          fluxEl("flux-player-count").textContent =
+            `${data.players?.online ?? 0} players online`;
+        }
+
+        if (fluxEl("flux-player-list")) {
+          fluxEl("flux-player-list").textContent =
+            "Player names are not available in this Bedrock response.";
+        }
+
+      } else {
+        setFluxBadge("offline", "Offline");
+
+        if (fluxEl("flux-players")) fluxEl("flux-players").textContent = "-- / --";
+        if (fluxEl("flux-version")) fluxEl("flux-version").textContent = "--";
+        if (fluxEl("flux-motd")) fluxEl("flux-motd").textContent = "FluxSMP is currently unreachable.";
+        if (fluxEl("flux-player-count")) fluxEl("flux-player-count").textContent = "Unavailable";
+        if (fluxEl("flux-player-list")) fluxEl("flux-player-list").textContent = "Server is offline.";
+      }
+
+      if (fluxEl("flux-updated")) {
+        fluxEl("flux-updated").textContent =
+          new Date().toLocaleTimeString();
+      }
+
+    } catch (error) {
+      console.error("FluxSMP status error:", error);
+
+      setFluxBadge("error", "Check failed");
+
+      if (fluxEl("flux-motd")) {
+        fluxEl("flux-motd").textContent =
+          "Unable to retrieve server status. " + error.message;
+      }
+
+      if (fluxEl("flux-updated")) {
+        fluxEl("flux-updated").textContent = "Request failed";
+      }
+
+    } finally {
+      clearTimeout(timeout);
+      if (button) button.disabled = false;
+      fluxBusy = false;
+    }
+  }
+
+  function copyFluxIP() {
+    const label = fluxEl("flux-copy-text");
+
+    navigator.clipboard.writeText(FLUX_HOST)
+      .then(() => {
+        if (!label) return;
+        label.textContent = "Copied!";
+        setTimeout(() => label.textContent = "Copy IP", 2000);
+      })
+      .catch(() => {
+        if (label) label.textContent = "Copy failed";
+      });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    fetchFluxStatus();
+    setInterval(fetchFluxStatus, FLUX_REFRESH_MS);
+  });
+
+  // Footer year (only if a #year element exists on the page)
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Contact form: open the visitor's email app with the details filled in
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const service = document.getElementById('contact-service').value;
+      const message = document.getElementById('contact-message').value.trim();
+
+      const subject = encodeURIComponent('Project request: ' + service);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Service: ' + service + '\n\n' +
+        'Message:\n' + message
+      );
+
+      window.location.href = 'mailto:calvinator.gg@gmail.com?subject=' + subject + '&body=' + body;
+    });
+</script>
+
+</body>
+</html>
